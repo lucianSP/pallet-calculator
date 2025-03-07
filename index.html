@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes per Pallet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Boxes per pallet</h2>
+        <label for="palletType">Pallet type</label>
+        <select id="palletType" onchange="updatePalletInfo()">
+            <option value="">Select</option>
+            <option value="euro">Euro (120cm x 80cm, 1500kg)</option>
+            <option value="standard">Standard (120cm x 100cm, 1000kg)</option>
+        </select>
+        <div id="palletInfo"></div>
+
+        <h3>Enter box dimensions and weight</h3>
+        <label for="boxLength">Box Length (cm)</label>
+        <input type="number" id="boxLength">
+        <label for="boxWidth">Box Width (cm)</label>
+        <input type="number" id="boxWidth">
+        <label for="boxHeight">Box Height (cm)</label>
+        <input type="number" id="boxHeight">
+        <label for="boxWeight">Box Weight (kg)</label>
+        <input type="number" id="boxWeight">
+        
+        <button onclick="calculateBoxes()">Calculate</button>
+        
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
